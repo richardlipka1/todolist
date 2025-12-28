@@ -7,8 +7,13 @@ $path = isset($_GET['path']) ? $_GET['path'] : '';
 
 // Generate a random hash for todolist ID using cryptographically secure method
 function generateHash() {
-    // Use random_bytes for better entropy and collision resistance
-    return bin2hex(random_bytes(16));
+    try {
+        // Use random_bytes for better entropy and collision resistance
+        return bin2hex(random_bytes(16));
+    } catch (Exception $e) {
+        // Fallback to less secure but reliable method if random_bytes fails
+        return bin2hex(openssl_random_pseudo_bytes(16));
+    }
 }
 
 // Sanitize input string

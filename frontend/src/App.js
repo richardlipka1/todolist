@@ -146,10 +146,18 @@ function App() {
   };
 
   const handleTitleEdit = () => {
-    if (editingTitle && currentTodolist && title !== currentTodolist.title) {
-      updateTitle(title);
+    if (editingTitle) {
+      // Save if title was changed
+      if (currentTodolist && title !== currentTodolist.title && title.trim()) {
+        updateTitle(title);
+      } else {
+        // Cancel editing without changes
+        setEditingTitle(false);
+        setTitle(currentTodolist?.title || '');
+      }
     } else {
-      setEditingTitle(!editingTitle);
+      // Start editing
+      setEditingTitle(true);
     }
   };
 

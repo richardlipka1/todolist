@@ -40,5 +40,7 @@ module.exports = {
     compress: true,
     port: 3000,
     hot: true
+    // Note: In dev mode, webpack-dev-server serves files from memory for better performance
+    // The static.directory is used for any additional static files not processed by webpack
   }
 };
