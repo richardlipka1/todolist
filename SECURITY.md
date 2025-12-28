@@ -26,7 +26,7 @@ function sanitizeInput($input, $maxLength = 255) {
 
 ### 2. Hash ID Validation
 
-Hash IDs are validated to ensure they match the expected format (32-character MD5 hex):
+Hash IDs are validated to ensure they match the expected format (32-character hexadecimal string from cryptographically secure random_bytes):
 
 ```php
 function isValidHash($hash) {

@@ -36,7 +36,7 @@ This document tracks the implementation of all requirements from the problem sta
 - [x] **Clear on Success** - Input clears after adding task
 
 ### Hash ID Implementation
-- [x] **Unique Hash Generation** - MD5 hash for each todolist
+- [x] **Unique Hash Generation** - Cryptographically secure random hash for each todolist
 - [x] **Hash as Primary Identifier** - Used in URLs and API calls
 - [x] **Hash Validation** - Server validates hash format
 - [x] **Hash Display** - Shown in UI for reference
@@ -107,7 +107,7 @@ This document tracks the implementation of all requirements from the problem sta
 | ADD Item Button | ✓ | ✓ | Green button, top right |
 | Popup Modal | ✓ | ✓ | Bootstrap modal component |
 | Task Text Field | ✓ | ✓ | Single input in modal |
-| Hash ID System | ✓ | ✓ | MD5 hash generation |
+| Hash ID System | ✓ | ✓ | Cryptographically secure hash |
 | Task Checkboxes | ✓ | ✓ | Interactive checkboxes |
 | Mark Tasks Done | ✓ | ✓ | Visual feedback with strikethrough |
 

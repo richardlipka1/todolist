@@ -58,7 +58,7 @@
 
 1. User clicks "ADD" button on main screen
 2. Frontend sends POST request to `/api.php?path=create`
-3. Backend generates a unique MD5 hash as todolist ID
+3. Backend generates a unique cryptographically secure hash as todolist ID
 4. Backend inserts new record into `todolists` table
 5. Backend returns `hash_id` and `title` to frontend
 6. Frontend navigates to todolist view
@@ -83,8 +83,9 @@
 ## Key Features
 
 ### Hash-based IDs
-- Each todolist has a unique MD5 hash as identifier
-- Provides security through obscurity
+- Each todolist has a unique cryptographically secure hash as identifier
+- 32-character hexadecimal string generated from random_bytes()
+- Provides security through obscurity and collision resistance
 - Makes URLs shareable and bookmarkable
 
 ### Responsive Design

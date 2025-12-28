@@ -21,7 +21,7 @@ function sanitizeInput($input, $maxLength = 255) {
     return $input;
 }
 
-// Validate hash ID format
+// Validate hash ID format (32-character hexadecimal string from random_bytes)
 function isValidHash($hash) {
     return is_string($hash) && preg_match('/^[a-f0-9]{32}$/i', $hash);
 }
