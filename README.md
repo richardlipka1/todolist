@@ -37,14 +37,42 @@ todolist/
 
 ## Installation
 
-### Prerequisites
+### Option 1: Using Docker (Recommended)
+
+This is the easiest way to get started. Docker will set up everything for you.
+
+#### Prerequisites
+- Docker and Docker Compose
+
+#### Steps
+
+1. Start the application:
+```bash
+docker-compose up -d
+```
+
+2. Wait for all services to start (this may take a minute on first run)
+
+3. Access the application:
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:8080
+   - Database: localhost:3306
+
+4. To stop the application:
+```bash
+docker-compose down
+```
+
+### Option 2: Manual Installation
+
+#### Prerequisites
 
 - PHP 7.4 or higher
 - MySQL 5.7 or higher
 - Node.js 14 or higher
 - npm or yarn
 
-### Backend Setup
+#### Backend Setup
 
 1. Create the database:
 ```bash
