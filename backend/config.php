@@ -1,9 +1,9 @@
 <?php
 // Database configuration - supports both local and Docker environments
-define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
-define('DB_USER', getenv('DB_USER') ?: 'root');
-define('DB_PASS', getenv('DB_PASS') ?: '');
-define('DB_NAME', getenv('DB_NAME') ?: 'todolist_db');
+define('DB_HOST', 'db.r4.websupport.sk');
+define('DB_USER', 'safat456');
+define('DB_PASS', 'jrqj!#Wr5n2|la`ER^/E');
+define('DB_NAME', 'todolist');
 
 // Create database connection
 function getDBConnection() {
