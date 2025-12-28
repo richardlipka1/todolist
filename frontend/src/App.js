@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost/todolist/backend/api.php';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080/api.php';
 
 function App() {
   const [currentView, setCurrentView] = useState('main');
@@ -146,7 +146,7 @@ function App() {
   };
 
   const handleTitleEdit = () => {
-    if (editingTitle && title !== currentTodolist.title) {
+    if (editingTitle && currentTodolist && title !== currentTodolist.title) {
       updateTitle(title);
     } else {
       setEditingTitle(!editingTitle);

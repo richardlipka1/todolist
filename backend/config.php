@@ -18,7 +18,10 @@ function getDBConnection() {
 }
 
 // Enable CORS for React frontend
-header('Access-Control-Allow-Origin: *');
+// SECURITY NOTE: In production, replace '*' with specific allowed origins
+// Example: header('Access-Control-Allow-Origin: https://yourdomain.com');
+$allowed_origin = getenv('ALLOWED_ORIGIN') ?: '*';
+header('Access-Control-Allow-Origin: ' . $allowed_origin);
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Content-Type: application/json');

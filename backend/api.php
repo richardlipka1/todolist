@@ -5,9 +5,10 @@ $conn = getDBConnection();
 $method = $_SERVER['REQUEST_METHOD'];
 $path = isset($_GET['path']) ? $_GET['path'] : '';
 
-// Generate a random hash for todolist ID
+// Generate a random hash for todolist ID using cryptographically secure method
 function generateHash() {
-    return md5(uniqid(rand(), true));
+    // Use random_bytes for better entropy and collision resistance
+    return bin2hex(random_bytes(16));
 }
 
 // Sanitize input string
